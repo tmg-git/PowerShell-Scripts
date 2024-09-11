@@ -61,7 +61,7 @@ function get-path {
         }        
     }
     #Export Result to a csv file to C:\Users\%username%\AppData\Roaming
-    array | Export-Csv ($env:APPDATA + "\Length-200-" + (Get-Date -Format yyyy-MM-dd-ss) + ".csv") -NoTypeInformation
+    $array | Export-Csv ($env:APPDATA + "\Length-200-" + (Get-Date -Format yyyy-MM-dd-ss) + ".csv") -NoTypeInformation
     $stopwatch.Stop()
     Write-Output "Script Completed in $($stopwatch.Elapsed.TotalMinutes) Minutes"
 }
