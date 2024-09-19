@@ -101,9 +101,9 @@ foreach ($item in $Items.Children) {
     }
     $array.Add($obj)
 }
-$array | Export-Csv -Path ("$env:LOCALAPPDATA" + "\AllSharedFolderSize" + (Get-Date -Format yyyy-MM-dd) + ".csv") -NoTypeInformation
-$result | Export-Csv -Path ("$env:LOCALAPPDATA" + "\PersonalFolder-Size." + (Get-Date -Format yyyy-MM-dd) + ".csv") -NoTypeInformation
-$failedUsers | Export-Csv -Path ("$env:LOCALAPPDATA" + "\FailedUser." + (Get-Date -Format yyyy-MM-dd) + ".csv") -NoTypeInformation
+$array | Export-Csv -Path ("$env:LOCALAPPDATA" + "\AllSharedFolderSize-" + (Get-Date -Format yyyy-MM-dd) + ".csv") -NoTypeInformation
+$result | Export-Csv -Path ("$env:LOCALAPPDATA" + "\PersonalFolder-Size-" + (Get-Date -Format yyyy-MM-dd) + ".csv") -NoTypeInformation
+$failedUsers | Export-Csv -Path ("$env:LOCALAPPDATA" + "\FailedUser-" + (Get-Date -Format yyyy-MM-dd) + ".csv") -NoTypeInformation
 
 $stopwatch.Stop()
 
