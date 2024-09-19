@@ -87,7 +87,7 @@ foreach ($employee in $employees)
     $result.Add($object)
 }
 
-#All Shared-Folder Including Root
+#All Shared-Folder
 $Items = Send-SfRequest $sfClient -Method GET -Entity Items -Id "allshared" -Expand "Children,Owner"
 
 $array =[System.Collections.Generic.List[Object]]::new()
